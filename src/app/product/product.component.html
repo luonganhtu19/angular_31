@@ -1,0 +1,24 @@
+<h1 [style.fontSize.px]="fontSize">{{title}}</h1>
+<label for="oneway">One Way Binding</label>
+<input id="oneway" #element type="text" (change)="changeSize(element.value)">
+<br>
+<label for="twoway">Two Way Binding</label>
+<input id="twoway" type="text" [(ngModel)]="fontSize">
+<table>
+  <tr>
+    <td>Id</td>
+    <td><input type="text" [(ngModel)]="product.id"></td>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td><input type="text" [(ngModel)]="product.name"></td>
+  </tr>
+  <tr>
+    <td>Price</td>
+    <td><input type="text" [(ngModel)]="product.price"></td>
+  </tr>
+</table>
+<h1>Produc information</h1>
+<p>id: {{product.id}}</p>
+<p>name: {{product.name}}</p>
+<p>price: {{product.price}}</p>
